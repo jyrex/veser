@@ -30,13 +30,24 @@ while x == "penuh":							#mengecek ada slot kosong atau tidak
 #input keluhan
 for j in range(0, 3):
 	if bengkel[pilih][j] == "":
-		x = "n"		
-		while x == "n":		
+		x = "n"
+		while x != "y":	
+			'''	
 			bengkel[pilih][j] = input("masukan keluhan = ")	
-			print (bengkel[pilih][j])
+			print ("keluhan anda = ",bengkel[pilih][j])
 			x = input("ini keluhan anda(y/n)? ")
-			print ("keluhan telah masuk ke database")
-		
+			'''
+			if (x == 'n') :
+				bengkel[pilih][j] = input("masukan keluhan = ")	
+				print ("keluhan anda = ",bengkel[pilih][j])
+				x = input("ini keluhan anda(y/n)? ")
+			else :
+				print ("inputan salah")
+				print ("keluhan anda =",bengkel[pilih][j])
+				x = input("ini keluhan anda(y/n)? ")
+
+		print ("keluhan telah masuk ke database, dan sedang di service silahkan menunggu")
+
 		#countdown waktu service 
 		num = len(bengkel[pilih][j])/20+3
 		num = int(num)				
@@ -44,22 +55,7 @@ for j in range(0, 3):
 			print ("sisa waktu {} detik".format(num))
 			time.sleep(num)
 			num -= 1
-			'''
-			# Try to convert it to a float
-			try:
-			    num = float(num)
-			except ValueError:
-			    print('Please enter in a number.\n')
-			    continue
-		 	
-
-			# Run our time.sleep() command,
-			# and show the before and after time
-			print('Before: %s' % time.ctime())
-			time.sleep(num)
-			print('After: %s\n' % time.ctime())
-			'''
-			
+	
 		print ("terima kasih telah menggunakan aplikasi kami")
 		break
 
