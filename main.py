@@ -1,40 +1,19 @@
-from classes import *
-from function import *
+from data import *
+from function import checkPrice
 import time
 import math
-
-user = [User(1, "Randy", [1, 3]),
-        User(2, "Axel", [4, 5]),
-        User(3, "Julio", [2, 7])
-        ]
-
-bengkel = [Bengkel(1, "Yamaha", [3, 4]),
-           Bengkel(2, "Suzuki", [1, 1]),
-           Bengkel(3, "Honda", [0, 6])
-           ]
-
-order = [Order(1,1,1)]
-
-detail = [Detail(1,1,"ban",10000,1)]
-
+    
 # main program
 for i in range(0, len(user)):
-    print("{} = {}".format(user[i].id, user[i].nama))
-inp = input("pilih user = ")
-# inp = input("pilih user (1, 2, 3 )= ")
-# if (inp = 1):
-#     inp = usrA
-# elif (inp = 2):
+    print("{} = {}".format(user[i].kode, user[i].nama))
 
+tmp = int(input("pilih user = "))
+tmp = tmp-1
+tmp = user[tmp]
 
-namaB = cariBengkel(locals()[inp])
-# print (namaB)
+print (tmp.nama)
 
-if (namaB == "Yamaha"):
-    pilih = 0
-elif (namaB == "Honda"):
-    pilih = 1
-elif (namaB == "Suzuki"):
-    pilih = 2
+print ("\n1. Service \n2. List Bengkel")
+inp = int(input("masukan pilihan = "))
 
-print("Bengkel yang dipilih {}".format(namaB))
+checkPrice()
