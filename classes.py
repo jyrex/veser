@@ -2,8 +2,8 @@
 
 class User:
 
-    def __init__(self, id, nama, lokasi):
-        self.id = id
+    def __init__(self, kode, nama, lokasi):
+        self.kode = kode
         self.nama = nama
         self.lokasi = lokasi
 
@@ -18,24 +18,24 @@ class Kendaraan:
 
 class Bengkel:
 
-    def __init__(self, id, nama, lokasi):
-        self.id = id
+    def __init__(self, kode, nama, lokasi):
+        self.kode = kode
         self.nama = nama
         self.lokasi = lokasi
 
 
 class Order:
 
-    def __init__(self, id, User, Bengkel):
-        self.id = id
+    def __init__(self, kode, User, Bengkel):
+        self.kode = kode
         self.user = User
         self.bengkel = Bengkel
 
 
 class Detail:
 
-    def __init__(self, id, Order, namaService, unitPrice, quantity):
-        self.id = id
+    def __init__(self, kode, Order, namaService, unitPrice, quantity):
+        self.kode = kode
         self.order = Order
         self.namaServis = namaService
         self.unitPrice = unitPrice
