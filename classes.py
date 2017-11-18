@@ -5,7 +5,7 @@ class User:
         self.id = id
         self.nama = nama
         self.lokasi = lokasi
-        id += 1
+        User.id += 1
 
 
 class Kendaraan:
@@ -18,7 +18,6 @@ class Kendaraan:
         self.noPolisi = noPolisi
         self.jenis = jenis
         self.warna = warna
-        id += 1
 
 
 class Bengkel:
@@ -28,7 +27,7 @@ class Bengkel:
         self.id = id
         self.nama = nama
         self.lokasi = lokasi
-        id += 1
+        Bengkel.id += 1
 
 
 class Order:
@@ -41,7 +40,7 @@ class Order:
         self.id = id
         self.user = User.id
         self.bengkel = Bengkel.id
-        id += 1
+        Order.id += 1
 
 
 class Detail:
@@ -58,4 +57,4 @@ class Detail:
         self.namaServis = namaService
         self.unitPrice = unitPrice
         self.quantity = quantity
-        id += 1
+        Detail.id += 1
