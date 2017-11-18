@@ -16,4 +16,7 @@ print (tmp.nama)
 print ("\n1. Service \n2. List Bengkel")
 inp = int(input("masukan pilihan = "))
 
-checkPrice()
+namaB = cariBengkel(user[inp])
+# print (namaB)
+
+print("Bengkel yang dipilih {}".format(namaB))
