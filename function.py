@@ -20,14 +20,25 @@ def cariBengkel(User):
         if (dist < min):
             min = dist
             result = i
-    return result.nama
+    #for debug purpose
+    #print(result.kode,result.nama,result.lokasi)
+    return result
 
-#def makeOrder(idUser, Keluhan):
-    #order += [idOrder, idUser, idBengkel]
+
+def placeOrder(idord, ord, quantity, user, namaB):
+    order.append(Order(idord, user.kode, namaB.kode))
+    detail.append(Detail(order[len(order) - 1], ord, len(ord)*50, quantity))
+    print ("total order = ")
+    for i in range(0, len(order)):
+        print("Nama User = {}".format(order[i].user))
+        print("Nama Bengkel = {}".format(order[i].bengkel))
+        if (order[i].kode == detail[i].kode):
+            print("keluhan = {}".format(detail[i].namaService))
+    print("\n")
+
 
 #def checkPrice():
 
-#def placeOrder():
 
 #def updateStatus():
 

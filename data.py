@@ -10,6 +10,6 @@ bengkel = [Bengkel(1, "Yamaha", [3, 4]),
            Bengkel(3, "Honda", [0, 6])
            ]
 
-order = [Order(1,1,1)]
+order = [Order(1, 1, 1), Order(2,2,2)]
 
-detail = [Detail(1,1,"ban",10000,1)]
+detail = [Detail(order[0], "ban", 10000, 1), Detail(order[1], "dashboard", 100000, 2)]

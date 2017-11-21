@@ -31,12 +31,11 @@ class Order:
         self.user = User
         self.bengkel = Bengkel
 
-
 class Detail:
 
-    def __init__(self, kode, Order, namaService, unitPrice, quantity):
-        self.kode = kode
-        self.order = Order
-        self.namaServis = namaService
+    def __init__(self, class_a, namaService, unitPrice, quantity):
+        self.kode = class_a.kode
+        #self.order = Order
+        self.namaService = namaService
         self.unitPrice = unitPrice
         self.quantity = quantity
