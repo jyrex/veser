@@ -28,13 +28,14 @@ def cariBengkel(User):
 def placeOrder(idord, ord, quantity, user, namaB):
     order.append(Order(idord, user.kode, namaB.kode))
     detail.append(Detail(order[len(order) - 1], ord, len(ord)*50, quantity))
-    print ("total order = ")
+    print ("\ntotal order = ")
     for i in range(0, len(order)):
-        print("Nama User = {}".format(order[i].user))
-        print("Nama Bengkel = {}".format(order[i].bengkel))
+        print("ID Order = {}".format(order[i].kode))
+        print("ID User = {}".format(order[i].user))
+        print("ID Bengkel = {}".format(order[i].bengkel))
         if (order[i].kode == detail[i].kode):
             print("keluhan = {}".format(detail[i].namaService))
-    print("\n")
+        print('\n')
 
 
 #def checkPrice():
