@@ -9,10 +9,8 @@ for i in range(0, len(user)) :
 
 #choose user and then save user into var usr
 usr = int(input("pilih user = "))
-usr = usr - 1
-usr = user[usr]
+usr = user[usr-1]
 
-print (usr.kode, usr.nama, usr.lokasi)
 
 #for debug purpose
 #print(usr.kode, usr.nama, usr.lokasi)
@@ -20,6 +18,7 @@ print (usr.kode, usr.nama, usr.lokasi)
 #user choose for service or just bengkel list
 print ("\n1. Service \n2. List Bengkel")
 inp = int(input("masukan pilihan = "))
+print ('\n')
 
 #service
 if (inp == 1):
@@ -35,9 +34,8 @@ elif (inp == 2):
     for i in range(0, len(bengkel)):
         print("{}. {}".format(i + 1, bengkel[i].nama))
     inp = int(input("masukan pilihan bengkel = "))
+    print ("\n")
     for i in range(0, len(bengkel)):
         if (inp == bengkel[i].kode):
             print("lokasi bengkel {}".format(bengkel[i].lokasi))
-        else:
-            print("inputan salah.")
 
